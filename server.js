@@ -18,7 +18,7 @@ if (!fs.existsSync(LOG_FILE)) {
   fs.writeFileSync(LOG_FILE, JSON.stringify([], null, 2));
 }
 
-// 📥 Endpoint pour recevoir les logs
+// Endpoint pour recevoir les logs
 app.post('/logs', (req, res) => {
   try {
     const logEntry = req.body;
@@ -56,7 +56,7 @@ app.post('/logs', (req, res) => {
   }
 });
 
-// 📋 Endpoint pour consulter les logs
+//  Endpoint pour consulter les logs
 app.get('/logs', (req, res) => {
   try {
     const data = fs.readFileSync(LOG_FILE, 'utf8');
@@ -67,7 +67,7 @@ app.get('/logs', (req, res) => {
   }
 });
 
-// 🗑️ Endpoint pour vider les logs
+//  Endpoint pour vider les logs
 app.delete('/logs', (req, res) => {
   try {
     fs.writeFileSync(LOG_FILE, JSON.stringify([], null, 2));
@@ -133,4 +133,5 @@ app.listen(PORT, '0.0.0.0', () => {
   console.log(`✅ Serveur démarré sur http://0.0.0.0:${PORT}`);
   console.log(`📊 Interface web: http://localhost:${PORT}`);
   console.log(`💾 Logs sauvegardés dans: ${LOG_FILE}`);
+
 });
