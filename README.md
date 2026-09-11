@@ -78,8 +78,13 @@ Le serveur écoute par défaut sur le port `3000`.
 1. Charger l'extension dans Chrome (voir [Installation](#installation))
 2. Démarrer le serveur de collecte (`node server.js`)
 3. Naviguer sur `x.com` : les requêtes POST/GET interceptées apparaissent :
+
+<img width="996" height="501" alt="image" src="https://github.com/user-attachments/assets/233463dc-b189-4303-bc62-8204ef32107c" />
+
    - dans la popup de l'extension (logs locaux)
    - dans l'interface web du serveur (`http://<ip>:3000`)
+     <img width="1049" height="500" alt="image" src="https://github.com/user-attachments/assets/78e74589-4219-4987-a7be-64808d5bc5ae" />
+
 
 ## Structure du projet
 
