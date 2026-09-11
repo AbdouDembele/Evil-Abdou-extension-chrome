@@ -83,7 +83,10 @@ Le serveur écoute par défaut sur le port `3000`.
 
    - dans la popup de l'extension (logs locaux)
    - dans l'interface web du serveur (`http://<ip>:3000`)
-     <img width="1049" height="500" alt="image" src="https://github.com/user-attachments/assets/78e74589-4219-4987-a7be-64808d5bc5ae" />
+     <img width="944" height="481" alt="image" src="https://github.com/user-attachments/assets/d0be36d2-46e7-4d66-9706-ca431af7c637" />
+
+  - sur notre serveur :
+    <img width="1049" height="500" alt="image" src="https://github.com/user-attachments/assets/a55f7d46-a938-4c8f-af05-4a5d16bc6ab4" />
 
 
 ## Structure du projet
